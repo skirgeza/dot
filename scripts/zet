@@ -3,8 +3,8 @@ set -e
 
 newdate=`date +%Y%m%d%H%M%S` 
 zet() {
-	mkdir $newdate
-	cd $newdate
+	mkdir $ZETDIR/$newdate
+	cd $ZETDIR/$newdate
 	vi "README.md"
 }
 
