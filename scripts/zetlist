@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+#List the topic of created zettles
+
+zetlist() {
+	for folder in $ZETDIR/`ls | head -5`; do
+		head -1 "$folder/README.md"
+	done
+	}
+
+zetlist
