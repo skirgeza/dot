@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+newdate=`date +%Y%m%d%H%M%S` 
+zet() {
+	mkdir $newdate
+	cd $newdate
+	vi "README.md"
+}
+
+zet
