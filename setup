@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
+ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
+ln -sf "$PWD/scripts" "$HOME/scripts"
