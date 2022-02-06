@@ -5,7 +5,7 @@ set -e
 
 zetlist() {
 		cd $ZETDIR
-		head -1 **/README.md
+		head -1 **/README.md | less
 	}
 
 zetlist
