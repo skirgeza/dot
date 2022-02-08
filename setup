@@ -3,7 +3,10 @@
 set -e
 ln -sf "$PWD/.bashrc" "$HOME/.bashrc"
 ln -sf "$PWD/.vimrc" "$HOME/.vimrc"
-ln -sf "$PWD/scripts" "$HOME/scripts"
+if [ ! -d "$HOME/scripts" ]
+	then
+		ln -sf "$PWD/scripts" "$HOME/scripts"
+fi
 ln -sf "$PWD/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$PWD/.dircolors" "$HOME/.dircolors"
 git config --global core.editor "vi"
