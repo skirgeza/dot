@@ -117,6 +117,12 @@ fi
 # -------------------- my aliases -------------------- 
 alias chmox='chmod +x'
 
+# -------------------- create dir and cd into it --------------------   
+mcd() {
+	mkdir $1
+	cd $1
+	}
+
 # -------------------- path --------------------
 pathappend() {
   declare arg
