@@ -2,7 +2,7 @@
 set -e
 # Opens the last created zettle.
 zetlast() {
-	lastdir=`ls -t $ZETDIR/ | head -1`
+	lastdir=`ls -1 $ZETDIR/ | sort -r | head -1`
 	vi $ZETDIR/$lastdir/README.md
 	}
 zetlast
