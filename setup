@@ -9,4 +9,5 @@ if [ ! -d "$HOME/scripts" ]
 fi
 ln -sf "$PWD/.tmux.conf" "$HOME/.tmux.conf"
 ln -sf "$PWD/.dircolors" "$HOME/.dircolors"
+ln -sf "$PWD/.sqliterc" "$HOME/.sqliterc"
 git config --global core.editor "vi"
