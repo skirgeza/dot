@@ -2,8 +2,8 @@
 #Add git repos here to auto pull each from git.
 set -e
 
-cd $ZETDIR
-git pull
-cd $DOTFILES
-git pull
-
+for DIR in $GHREPOS/*/ ; do
+	echo $DIR
+	cd $DIR
+	git pull
+done
