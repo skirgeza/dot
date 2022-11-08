@@ -122,6 +122,10 @@ mcd() {
 	mkdir $1
 	cd $1
 	}
+# -------------------- create bash file, make it executable and edit with vim --------------------   
+newsh() {
+	echo '#!/bin/bash' > $1 && chmod +x $1 && vi $1
+}
 
 # -------------------- path --------------------
 pathappend() {
