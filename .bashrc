@@ -126,6 +126,10 @@ mcd() {
 newsh() {
 	echo '#!/bin/bash' > $1 && chmod +x $1 && vi $1
 }
+# -------------------- create python file, make it executable and edit with vim --------------------   
+newpy() {
+	echo '#!/usr/bin/env python3' > $1 && chmod +x $1 && vi $1
+}
 
 # -------------------- path --------------------
 pathappend() {
