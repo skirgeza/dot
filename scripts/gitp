@@ -2,7 +2,7 @@
 #Add git repos here to auto pull each from git.
 set -e
 
-for DIR in $GHREPOS/*/ ; do
+for DIR in $GHREPOSALL/*/* ; do
 	echo $DIR
 	cd $DIR
 	git pull
