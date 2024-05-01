@@ -117,6 +117,7 @@ fi
 
 # -------------------- my aliases -------------------- 
 alias chmox='chmod +x'
+alias venv='source .venv/bin/activate'
 
 # -------------------- create dir and cd into it --------------------   
 mcd() {
