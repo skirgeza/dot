@@ -1,8 +1,16 @@
 #!/bin/bash
 set -e
-# Opens the last created zettle.
+# Opens the last created zettle. Or open second last by supplying int 2 as argument
+# eg zetlast 2 will open the second last zettle
 zetlast() {
-	lastdir=`ls -1 $ZETDIR/ | sort -r | head -1`
-	vi $ZETDIR/$lastdir/README.md
-	}
-zetlast
+    if [ -z "$1" ]; then
+	    lastdir=`ls -1 $ZETDIR/ | sort -r | head -1`
+	    vi $ZETDIR/$lastdir/README.md
+    elif [[ "$1" =~ ^-?[0-9]+$ ]]; then
+        lastdir=`ls -1 $ZETDIR/ | sort -r | head -"$1" | tail -1`
+	    vi $ZETDIR/$lastdir/README.md
+    else
+        return
+    fi
+}
+zetlast "$1"
