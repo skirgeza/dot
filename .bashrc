@@ -192,3 +192,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Disable CTRL+S Pause functionality in terminal. Messes with VIM spell CTRL+X CTRL+S
+stty -ixon
