@@ -11,6 +11,7 @@ set hlsearch
 set incsearch
 set linebreak
 set ruler
+set spell
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
