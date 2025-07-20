@@ -57,6 +57,7 @@ TERM st
 TERM st-meta
 TERM st-256color
 TERM st-meta-256color
+TERM tmux-256color
 TERM vt100
 TERM xterm
 TERM xterm-new
@@ -69,7 +70,7 @@ TERM xterm-termite
 EIGHTBIT 1
 NORMAL 00
 FILE 00
-DIR 34
+DIR 01;36
 OTHER_WRITABLE 34;40
 LINK 35
 FIFO 30;44

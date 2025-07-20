@@ -1,4 +1,3 @@
-colorscheme desert
 set number
 set tabstop=4
 set softtabstop=4
@@ -11,6 +10,7 @@ set hlsearch
 set incsearch
 set linebreak
 set ruler
+syntax on
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -20,4 +20,8 @@ endif
 
 call plug#begin()
     Plug 'preservim/nerdtree'
+    Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
+
+set termguicolors
+colorscheme catppuccin_mocha

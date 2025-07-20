@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null; then
+    OS="WSL"
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    OS="Linux"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    OS="macOS"
+else
+    OS="Unknown"
+fi
+
+echo "Detected OS: $OS"
