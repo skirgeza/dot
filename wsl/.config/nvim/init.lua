@@ -1,0 +1,2 @@
+require("skg")
+print("hello")
