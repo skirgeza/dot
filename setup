@@ -10,7 +10,7 @@ if [[ "$OS" == "WSL" ]]; then
 		[ -d "$HOME/scripts" ] && echo "Warning: '$HOME/scripts' exists and is not a symlink. Skipping..." || ln -sf "$PWD/scripts" "$HOME/scripts"
     fi
     ln -sf "$PWD/wsl/.tmux.conf" "$HOME/.tmux.conf"
-    ln -sf "$PWD/wsl/.dircolors" "$HOME/.dircolors"
+    #ln -sf "$PWD/wsl/.dircolors" "$HOME/.dircolors"
     ln -sf "$PWD/wsl/.sqliterc" "$HOME/.sqliterc"
     git config --global core.editor "vi"
     if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
