@@ -16,4 +16,18 @@ if [[ "$OS" == "WSL" ]]; then
     if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
         git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
     fi
+elif [[ "$OS" == "Linux" ]]; then
+    echo "Detected Linux - Linking Linux-specific dotfiles..."
+    ln -sf "$PWD/linux/.bashrc" "$HOME/.bashrc"
+    ln -sf "$PWD/linux/.vimrc" "$HOME/.vimrc"
+    if [ ! -L "$HOME/scripts" ]; then
+		[ -d "$HOME/scripts" ] && echo "Warning: '$HOME/scripts' exists and is not a symlink. Skipping..." || ln -sf "$PWD/scripts" "$HOME/scripts"
+    fi
+    ln -sf "$PWD/linux/.tmux.conf" "$HOME/.tmux.conf"
+    ln -sf "$PWD/linux/.dircolors" "$HOME/.dircolors"
+    ln -sf "$PWD/linux/.sqliterc" "$HOME/.sqliterc"
+    git config --global core.editor "vi"
+    if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+        git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+    fi
 fi
