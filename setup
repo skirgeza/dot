@@ -13,6 +13,7 @@ if [[ "$OS" == "WSL" ]]; then
         [ -d "$HOME/.config/nvim" ] && echo "Warning: '$HOME/.config/nvim' exists and is not a symlink. Skipping..." || ln -sf "$PWD/wsl/.config/nvim" "$HOME/.config/nvim"
     fi
     echo "ripgrep required for nvim plugin telescope, ensure it's installed."
+    echo "ruff required for nvim plugin conform, ensure it's installed."
     ln -sf "$PWD/wsl/.tmux.conf" "$HOME/.tmux.conf"
     #ln -sf "$PWD/wsl/.dircolors" "$HOME/.dircolors"
     ln -sf "$PWD/wsl/.sqliterc" "$HOME/.sqliterc"
@@ -31,6 +32,7 @@ elif [[ "$OS" == "Linux" ]]; then
         [ -d "$HOME/.config/nvim" ] && echo "Warning: '$HOME/.config/nvim' exists and is not a symlink. Skipping..." || ln -sf "$PWD/wsl/.config/nvim" "$HOME/.config/nvim"
     fi
     echo "ripgrep required for nvim plugin telescope, ensure it's installed."
+    echo "ruff required for nvim plugin conform, ensure it's installed."
     ln -sf "$PWD/linux/.tmux.conf" "$HOME/.tmux.conf"
     #ln -sf "$PWD/linux/.dircolors" "$HOME/.dircolors"
     ln -sf "$PWD/linux/.sqliterc" "$HOME/.sqliterc"
