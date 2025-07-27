@@ -14,6 +14,8 @@ if [[ "$OS" == "WSL" ]]; then
     fi
     echo "ripgrep required for nvim plugin telescope, ensure it's installed."
     echo "ruff required for nvim plugin conform, ensure it's installed."
+    echo "pyright required, can install with pip"
+    echo "also install lua-language-server"
     ln -sf "$PWD/wsl/.tmux.conf" "$HOME/.tmux.conf"
     #ln -sf "$PWD/wsl/.dircolors" "$HOME/.dircolors"
     ln -sf "$PWD/wsl/.sqliterc" "$HOME/.sqliterc"
